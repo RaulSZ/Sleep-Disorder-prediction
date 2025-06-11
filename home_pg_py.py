@@ -75,8 +75,8 @@ if st.button('Predict'):
   rf_res = rf.predict(input_data)[0]
   xgb_res = xgb.predict(input_data)[0]
   st.subheader('Results')
-st.write(f"RF prediction: {'Sleep Asomnia' if rf_res == 1 else 'Isomnia' if rf_res == 2 else 'None'}")
-st.write(f"XGBoost prediction: {'Sleep Asomnia' if xgb_res == 1 else 'Isomnia' if xgb_res == 2 else 'None'}")
+  st.write(f"RF prediction: {'Sleep Asomnia' if rf_res == 1 else 'Isomnia' if rf_res == 2 else 'None'}")
+  st.write(f"XGBoost prediction: {'Sleep Asomnia' if xgb_res == 1 else 'Isomnia' if xgb_res == 2 else 'None'}")
 
 st.subheader('Feature importances: ')
 col1, col2 = st.columns(2)

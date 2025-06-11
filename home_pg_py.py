@@ -70,7 +70,7 @@ heart_rate = st.slider('Heart Rate:', 0, 100, 50)
 daily_steps = st.slider('Daily Steps', 0, 15000, 5000)
 bp = st.slider('Bp', 0, 140, 50)
 
-input_data  = np.array([gender, occp, age, sleep_dur, quality_sleep, physical_activity_level, stress_level, bmi_category, heart_rate, daily_steps, bp])
+input_data  = np.array([gender, occp, age, sleep_dur, quality_sleep, physical_activity_level, stress_level, bmi_category, heart_rate, daily_steps, bp]).reshape(-1;1)
 if st.button('Predict'):
   rf_res = rf.predict(input_data)[0]
   xgb_res = xgb.predict(input_data)[0]
